@@ -1,0 +1,20 @@
+.home-container {
+  background-image: url("../../assets/img/main-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  color: white;
+
+
+  .header {
+    background-color: #350e0ede;
+    padding: 1rem;
+    margin-top: 13%;
+
+    h1 {
+
+      font-size: 4.5rem;
+    }
+  }
+}
