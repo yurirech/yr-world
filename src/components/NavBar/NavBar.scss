@@ -29,62 +29,73 @@
         }
       }
     }
+
     .hide-brand-mobile {
       display: none;
     }
   }
-
+}
 
   @media (max-width: 768px) {
+    .navbar {
+      padding: .5rem !important;
 
-    .hide-brand-mobile {
-      display: unset;
-    }
-
-    .hide-brand-desktop {
-      display: none;
-    }
-
-    .nav-header {
-      display: flex;
-      width: 100%;
-      flex-direction: row-reverse;
-
-      .navbar-brand {
-        display: block;
-        margin-right: auto;
+      .hide-brand-mobile {
+        display: unset;
       }
-    }
 
+      .hide-brand-desktop {
+        display: none;
+      }
 
-    .navbar-expand {
-      flex-direction: column;
+      .nav-header {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
 
-      .navbar-nav {
-        flex-direction: column;
-
-        .nav-link {
-          padding-left: 0;
+        .navbar-brand {
+          display: block;
+          margin-left: auto;
         }
       }
-      .navbar-toggler {
-        border-color: #73737336;
-        display: block;
+
+
+      .navbar-expand {
+        flex-direction: column;
+
+        .navbar-nav {
+          flex-direction: column;
+
+          .nav-link {
+            padding-left: 5px;
+          }
+        }
+
+        .navbar-toggler {
+          display: block;
+        }
       }
-    }
 
-    .navbar-collapse {
-      width: 100%;
-      text-align: left;
-      transition: height 0.25s cubic-bezier(0.6, -0.28, 1, 0.58) 0s;
+      .navbar-collapse {
+        width: 100%;
+        text-align: left;
+        transition: height 0.25s cubic-bezier(0.6, -0.28, 1, 0.58) 0s;
 
-      .ml-auto {
-        margin-left: unset!important;
+        .ml-auto {
+          margin-left: unset !important;
+        }
       }
-    }
 
-    .collapse:not(.show) {
-      display: none!important;
+      .collapse:not(.show) {
+        display: none !important;
+      }
     }
   }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .navbar {
+      .navbar-toggler {
+        padding-left: 0;
+      }
+    }
 }

@@ -8,9 +8,8 @@ const NavBar = () => {
     <div className='navbar'>
       <Navbar >
         <div className='nav-header'>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" >
-            <Navbar.Brand href="#home" className='hide-brand-mobile'>YR</Navbar.Brand>
-          </Navbar.Toggle>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Brand href="#home" className='hide-brand-mobile'>YR</Navbar.Brand>
         </div>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
