@@ -6,15 +6,17 @@ import './NavBar.scss'
 const NavBar = () => {
   return (
     <div className='navbar'>
-      <Navbar>
+      <Navbar >
         <div className='nav-header'>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" >
+            <Navbar.Brand href="#home" className='hide-brand-mobile'>YR</Navbar.Brand>
+          </Navbar.Toggle>
         </div>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
-            <Nav.Link>Início</Nav.Link>
-            <Nav.Link>Sobre</Nav.Link>
-            <Navbar.Brand href="#home">YR</Navbar.Brand>
+            <Nav.Link>Home</Nav.Link>
+            <Nav.Link>About</Nav.Link>
+            <Navbar.Brand href="#home" className='hide-brand-desktop'>YR</Navbar.Brand>
             <Nav.Link href="#instagram">Contact</Nav.Link>
             <Nav.Link href="#contact">Resources</Nav.Link>
           </Nav>
@@ -22,6 +24,6 @@ const NavBar = () => {
       </Navbar>
     </div>
   )
-}
+};
 
 export default NavBar;
