@@ -1,0 +1,137 @@
+@import "../../_media-queries.scss";
+
+.about-container {
+  color: var(--yr-world-light-shade);
+  background-color: var(--yr-world-dark-shade);
+
+
+  .wrapper {
+    justify-content: space-evenly;
+
+    .title {
+      background-color: var(--yr-world-light-accent);
+      padding: 1.25rem 1rem 1.25rem 2.5rem;
+      text-align: left;
+      position: relative;
+      color: #ffffff;
+
+      div{
+        height: 1.5rem;
+        background-color: var(--yr-world-light-shade);
+        position: absolute;
+        width: 93%;
+        bottom: -.5rem;
+        right: 1rem;
+      }
+
+    }
+
+    .content {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      padding-right: 1rem;
+      background-color: var(--yr-world-dark-shade);
+
+
+      p {
+        font-size: 1.25rem;
+        text-align: justify;
+        line-height: 2rem;
+        color: var(--yr-world-light-shade);
+        padding: 1rem;
+        margin: 0;
+      }
+
+    }
+
+    .img-holder {
+      margin-top: 1rem;
+
+      img {
+        margin-top: 3rem;
+        width: 125px;
+        border-radius: 0.25rem;
+      }
+    }
+
+
+    .interests {
+      background-color: var(--yr-world-dark-accent);
+      color: #ffffff;
+      text-align: left;
+      padding: 1.25rem;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      border-radius: .25rem;
+
+      .unordered-list {
+        padding-left: 0.5rem;
+
+        ul {
+          padding-left: 1rem;
+        }
+      }
+    }
+
+    .cv {
+      background-color: var(--yr-world-light-shade);
+      color: var(--yr-world-dark-shade);
+      padding: 1rem;
+
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include media-query-xl {
+  .about-container {
+    .wrapper {
+      .img-holder {
+
+        img {
+          //width: 55%;
+          width: 200px;
+          height: 265px;
+          object-fit: cover;
+          border: 4px solid #ecedef;
+          object-position: 0 1%;
+        }
+      }
+    }
+  }
+}
+
+@include media-query-md {
+   .about-container {
+     .wrapper {
+       .title {
+         margin-top: 1rem;
+         padding: 0.5rem 1rem 0.5rem 1.5rem;
+
+         h1 {
+           font-size: 2.25rem;
+         }
+
+         div {
+           height: .75rem;
+           width: 85%;
+           bottom: -.25rem;
+         }
+       }
+
+      .content {
+        padding-right: unset;
+      }
+
+       .interests {
+         margin-top: 0;
+       }
+
+       .cv {
+         margin-bottom: 1rem;
+       }
+     }
+   }
+ }

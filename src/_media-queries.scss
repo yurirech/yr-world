@@ -1,0 +1,83 @@
+$breakpoint-sm: 576px;
+$breakpoint-md: 767px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$breakpoint-destinations: 1280px;
+
+.hidden-sm-down {
+  @media screen and (max-width: $breakpoint-sm) {
+    display: none;
+  }
+}
+
+.hidden-sm-up {
+  @media screen and (min-width: $breakpoint-sm+1) {
+    display: none;
+  }
+}
+
+.hidden-md-down {
+  @media screen and (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+.hidden-md-up {
+  @media screen and (min-width: $breakpoint-md+1) {
+    display: none;
+  }
+}
+
+.hidden-lg-down {
+  @media screen and (max-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin media-query-sm {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin media-query-md {
+  @media screen and (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin media-query-lg {
+  @media screen and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin media-query-xl {
+  @media screen and (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin media-query-destinations {
+  @media screen and (max-width: $breakpoint-destinations) {
+    @content;
+  }
+}
+
+@mixin media-query-ipad-landscape {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin media-query-ipad-portrait {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    @content;
+  }
+}

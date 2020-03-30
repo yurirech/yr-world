@@ -3,13 +3,15 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   color: white;
+  padding-top: 13%;
+  position: relative;
 
   .header {
-    background-color: #350e0ede;
+    background-color: #1e1d2cdb;
     padding: 1rem;
-    margin-top: 13%;
+
 
     h1 {
       font-size: 4.5rem;
@@ -22,7 +24,6 @@
     bottom: 0;
     right: 0;
     padding-right: 1rem;
-    padding-bottom: 1rem;
 
     a {
       color: white;
@@ -36,9 +37,9 @@
 
 @media (max-width: 1080px) {
  .home-container {
-
+   padding-top: 20%;
    .header {
-     margin-top: 20%;
+     margin-top: 13%;
      h1 {
        font-size: 3.5rem;
      }

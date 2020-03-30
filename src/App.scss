@@ -1,0 +1,37 @@
+.App {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  height: 100%;
+
+  --yr-world-dark-red-transparent: #350e0ede;
+  --yr-world-dark-grey-bg: #1b1b1b;
+  --yr-world-dark-shade: #1e1d2c;
+  --yr-world-brand-color: #6d9136;
+  --yr-world-dark-accent:  #6d2020d4;
+  --yr-world-light-accent: #315067;
+  --yr-world-light-shade: #f4f5f5;
+
+  .margin-page {
+    margin: 4.5rem 1.5rem  0 1.5rem;
+  }
+
+  .footer {
+    padding: 1rem;
+    background-color: var(--yr-world-dark-shade);
+    color: var(--yr-world-light-shade);
+
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+
+
+
+/*.App * {*/
+/*  background: #000 !important;*/
+/*  color: #0f0 !important;*/
+/*  outline: solid #f00 1px !important;*/
+/*}*/

@@ -1,7 +1,9 @@
 .navbar {
-  padding: 1.25rem 1.5rem;
+  padding: 2rem 0rem !important;
   width: 100%;
   color: white;
+  position: absolute !important;
+  z-index: 1;
 
   a {
     color: #ffffff !important;
@@ -38,7 +40,11 @@
 
   @media (max-width: 768px) {
     .navbar {
-      padding: .5rem !important;
+      padding: unset !important;
+      top: .35rem;
+      right: 0;
+      padding-bottom: .75rem !important;
+      position: relative!important;
 
       .hide-brand-mobile {
         display: unset;
@@ -53,9 +59,14 @@
         width: 100%;
         flex-direction: row;
 
+        button {
+          margin-left: 1rem;
+        }
+
         .navbar-brand {
           display: block;
           margin-left: auto;
+          margin-right: 1.5rem;
         }
       }
 
@@ -65,9 +76,12 @@
 
         .navbar-nav {
           flex-direction: column;
+          margin-left: .95rem;
 
           .nav-link {
             padding-left: 5px;
+            padding-top: .35rem;
+            padding-bottom: .35rem;
           }
         }
 
