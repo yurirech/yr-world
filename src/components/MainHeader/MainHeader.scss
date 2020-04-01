@@ -1,0 +1,39 @@
+@import '../../media-queries';
+
+.main-header {
+  background-color: var(--yr-world-light-accent);
+  padding: 1.25rem 1rem 1.25rem 2.5rem;
+  text-align: left;
+  position: relative;
+  color: #ffffff;
+
+  div {
+    height: 1.5rem;
+    background-color: var(--yr-world-light-shade);
+    position: absolute;
+    width: 93%;
+    bottom: -.5rem;
+    right: 1rem;
+  }
+}
+
+@include media-query-md {
+  .about-container {
+    .wrapper {
+      .title {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem 0.5rem 1.5rem;
+
+        h1 {
+          font-size: 2.25rem;
+        }
+
+        div {
+          height: .75rem;
+          width: 85%;
+          bottom: -.25rem;
+        }
+      }
+    }
+  }
+}

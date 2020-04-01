@@ -5,15 +5,15 @@ import Col from "react-bootstrap/Col";
 import profilePic from '../../assets/img/profile-pic.jpeg';
 import UnorderedList from "../../components/UnorderedList/UnorderedList";
 import {professionalInterests, generalInterests, whoAmI} from "./AboutContent";
+import MainHeader from "../../components/MainHeader/MainHeader";
 
 class About extends Component {
   render() {
     return (
       <div className='about-container'>
-        <Row className='wrapper' noGutters={true}>
-         <Col className='title margin-page' xl={12}>
-           <div> </div>
-           <h1>{whoAmI.title}</h1>
+        <Row className='wrapper spc-evenly' noGutters={true}>
+         <Col xl={12} className='margin-page' >
+           <MainHeader title={whoAmI.title} />
          </Col>
           <Col className='img-holder' md={12} xl={2}>
             <img alt='' src={profilePic} />

@@ -14,7 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      route: 'home'
+      route: 'contact'
     }
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
     }
 
     if(this.state.route !== 'home') {
-      footer = <div className='footer'><h5>YR World - coded by Yuri Rech 2020</h5></div>
+      footer = <div><div className='footer'><h5>YR World - coded by Yuri Rech 2020</h5></div></div>
     }
 
     return (
