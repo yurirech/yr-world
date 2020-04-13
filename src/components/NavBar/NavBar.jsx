@@ -17,7 +17,7 @@ const NavBar = ({onRouteChange}) => {
             <Nav.Link onClick={() => onRouteChange('about')}>About</Nav.Link>
             <Navbar.Brand href="home" onClick={() => onRouteChange('home')} className='hide-brand-desktop'>YR</Navbar.Brand>
             <Nav.Link onClick={() => onRouteChange('contact')}>Contact</Nav.Link>
-            <Nav.Link href="#contact">Resources</Nav.Link>
+            <Nav.Link onClick={() => onRouteChange('links')}>Resources</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

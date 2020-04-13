@@ -6,8 +6,10 @@ const ClickableIcons = props => {
   return (
     <div className='list-with-icons'>
       {
-        props.clickableIcons.map(clickableIcon =>(
-        <a href={clickableIcon.href} rel='noopener noreferrer' target={clickableIcon.target}><FontAwesomeIcon icon={clickableIcon.icon} /></a>
+        props.clickableIcons.map((clickableIcon, i) => (
+        <a key={i} href={clickableIcon.href} rel='noopener noreferrer' target={clickableIcon.target}>
+          <FontAwesomeIcon key={i} icon={clickableIcon.icon} />
+        </a>
       ))}
     </div>
   );

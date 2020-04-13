@@ -1,0 +1,44 @@
+.links-container {
+  color: var(--yr-world-light-shade);
+
+  .links-content {
+    margin-top: 2.5rem;
+
+    .side-info {
+      border-radius: .35rem;
+      padding: 3rem 1.5rem;
+      background-color: var(--yr-world-light-shade);
+      color: var(--yr-world-dark-shade);
+
+      svg {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+      }
+    }
+
+    .content {
+      overflow-y: scroll;
+      height: 30rem;
+      text-align: left;
+
+      .link {
+        border: 2px solid var(--yr-world-light-shade);
+        padding: 1rem;
+        margin-right: 1rem;
+
+        hr {
+          border-top: 2px solid var(--yr-world-light-shade);
+        }
+
+        .img-holder {
+          text-align: center;
+          img {
+            width: 30rem;
+            object-fit: cover;
+            object-position: 50% 50%;
+          }
+        }
+      }
+    }
+  }
+}

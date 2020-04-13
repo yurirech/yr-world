@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
 import './App.scss';
 import Home from "./containers/Home/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,42 +8,50 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import NavBar from "./components/NavBar/NavBar";
 import About from "./containers/About/About";
 import Contact from "./containers/Contact/Contact";
+import Links from "./containers/Links/Links";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons/faExternalLinkAlt";
+import { setRoute } from "./actions";
 
-library.add(fab);
+library.add(fab, faArrowRight, faExternalLinkAlt);
+
+const mapStateToProps = state => {
+  return {
+    route: state.changeRoute.route,
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onRouteChange: (route) => dispatch(setRoute(route)),
+  }
+};
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      route: 'contact'
-    }
-  }
-
-  onRouteChange = (route) => {
-    this.setState({route: route});
-    console.log(this.state);
-  };
 
   render() {
+
+    const { route, onRouteChange } = this.props;
     let body;
     let footer;
 
-
-    if(this.state.route === 'home') {
-      body = <Home/>
-    } else if(this.state.route === 'about') {
+    if(route === 'home') {
+      body = <Home />
+    } else if(route === 'about') {
       body = <About />
+    } else  if(route ==='contact'){
+      body = <Contact  />
     } else {
-      body = <Contact/>
+      body = <Links />
     }
 
-    if(this.state.route !== 'home') {
+    if(route !== 'home') {
       footer = <div><div className='footer'><h5>YR World - coded by Yuri Rech 2020</h5></div></div>
     }
 
     return (
       <div className="App">
-        <NavBar onRouteChange={this.onRouteChange} />
+        <NavBar onRouteChange={onRouteChange} />
         {body}
         {footer}
       </div>
@@ -50,4 +59,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps) (App);

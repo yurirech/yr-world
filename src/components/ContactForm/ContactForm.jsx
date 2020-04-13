@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useFormik } from "formik";
 
-
 const validate = values => {
   const errors = {};
   if (!values.name) {
@@ -29,7 +28,16 @@ const validate = values => {
   return errors;
 };
 
-const ContactForm = () => {
+const styleSentMessage = {
+  marginTop: '2rem',
+  padding: '2rem',
+  fontSize: '1.5rem',
+  backgroundColor: 'var(--yr-world-light-shade)',
+  color: 'var(--yr-world-dark-shade)',
+  borderRadius: '.5rem'
+};
+
+const ContactForm = ({isSentState, onSendEmail}) => {
 
   const formik = useFormik({
     initialValues: {
@@ -40,7 +48,6 @@ const ContactForm = () => {
     },
     validate,
     onSubmit: values => {
-
       const template_params = {
         "from_website_name": "yurirech.it",
         "from_name": values.name,
@@ -50,42 +57,46 @@ const ContactForm = () => {
         "message_html": values.message
       };
 
-        emailjs.send('gmail','template_pWsS8eDz', template_params, 'user_oo9bsbo183PQuyl6penUi')
+       emailjs.send('gmail','template_pWsS8eDz', template_params, 'user_oo9bsbo183PQuyl6penUi')
           .then((result) => {
-            console.log(result.text);
+            if(result.status === 200) {
+              onSendEmail(true);
+            }
           }, (error) => {
-            console.log(error.text);
+            if(error) {
+              alert('There was an unexpected error, please, contact me through the social networks\' links below');
+            }
           });
-
-      console.log(template_params);
-      alert(JSON.stringify(values, null, 2));
     },
   });
 
+  if(!isSentState) {
+    return (
+      <Form className="contact-form" onSubmit={formik.handleSubmit}>
+        <FormInputText  name='name' id='name' type='text' placeholder='Your name *'
+                        onChange={formik.handleChange} value={formik.values.name}/>
+        {formik.errors.name ? <div>{formik.errors.name}</div> : null}
 
-  return (
-    <Form className="contact-form" onSubmit={formik.handleSubmit}>
-      <FormInputText  name='name' id='name' type='text' placeholder='Your name *'
-                      onChange={formik.handleChange} value={formik.values.name}/>
-      {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+        <FormInputText name='email' id='email' type='email' placeholder='your.email@email.com *'
+                       onChange={formik.handleChange} value={formik.values.email} />
+        {formik.errors.email ? <div>{formik.errors.email}</div> : null}
 
-      <FormInputText name='email' id='email' type='email' placeholder='your.email@email.com *'
-                     onChange={formik.handleChange} value={formik.values.email} />
-      {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+        <FormInputText name='phone' id='phone' type='tel' placeholder='+39 351 555 5555'
+                       onChange={formik.handleChange} value={formik.values.phone} />
+        {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
 
-      <FormInputText name='phone' id='phone' type='tel' placeholder='+39 351 555 5555'
-                     onChange={formik.handleChange} value={formik.values.phone} />
-      {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
+        <FormInputText name='message' id='message' as='textarea'
+                       rows='4' type='text' placeholder='Your message *'
+                       onChange={formik.handleChange} value={formik.values.message} />
+        {formik.errors.message ? <div>{formik.errors.message}</div> : null}
 
-      <FormInputText name='message' id='message' as='textarea'
-                     rows='4' type='text' placeholder='Your message *'
-                     onChange={formik.handleChange} value={formik.values.message} />
-      {formik.errors.message ? <div>{formik.errors.message}</div> : null}
-
-      <small>Fields with * are required</small>
-      <Button type='submit'>Submit</Button>
-    </Form>
-  );
+        <small>Fields with * are required</small>
+        <Button type='submit'>Submit</Button>
+      </Form>
+    );
+  } else {
+    return <div style={styleSentMessage}>Thank you very much for contacting me. I will be in touch with you shortly.</div>
+ }
 };
 
 export default ContactForm;

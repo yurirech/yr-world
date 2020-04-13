@@ -4,8 +4,8 @@ import React from 'react';
   return (
   <div className='unordered-list'>
     <ul>
-     {props.listItems.map(item => (
-      <li>{item}</li>
+     {props.listItems.map((item, i) => (
+      <li key={i}>{item}</li>
      ))}
     </ul>
   </div>
