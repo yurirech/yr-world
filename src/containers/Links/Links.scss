@@ -1,14 +1,20 @@
+@import "../../media-queries";
+
 .links-container {
   color: var(--yr-world-light-shade);
 
   .links-content {
-    margin-top: 2.5rem;
+    margin-top: .75rem;
 
     .side-info {
-      border-radius: .35rem;
-      padding: 3rem 1.5rem;
-      background-color: var(--yr-world-light-shade);
-      color: var(--yr-world-dark-shade);
+      padding: .5rem 1.5rem;
+      background-color: var(--yr-world-dark-grey-bg);
+      margin-bottom: 1rem;
+
+      h5 {
+        margin-bottom: 0;
+        font-size: 1.15rem;
+      }
 
       svg {
         margin-top: 1rem;
@@ -16,18 +22,34 @@
       }
     }
 
-    .content {
-      overflow-y: scroll;
+    .scroll-area {
       height: 30rem;
       text-align: left;
 
-      .link {
-        border: 2px solid var(--yr-world-light-shade);
-        padding: 1rem;
+      .resource-item {
+        background-color: var(--yr-world-light-accent);
+        border: 1px solid #416a88;
+        padding: 1.75rem;
         margin-right: 1rem;
+        margin-bottom: 1rem;
 
         hr {
           border-top: 2px solid var(--yr-world-light-shade);
+        }
+
+        a {
+          color: unset;
+          display: flex;
+          align-items: center;
+
+          h4 {
+            margin-bottom: 0;
+            margin-right: 1rem;
+          }
+
+          svg {
+            font-size: 1.25rem;
+          }
         }
 
         .img-holder {
@@ -36,6 +58,69 @@
             width: 30rem;
             object-fit: cover;
             object-position: 50% 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-query-md {
+  .links-container {
+    .links-content {
+      .side-info {
+        margin-top: .75rem;
+      }
+
+      .scroll-area {
+        .resource-item {
+          margin: 1rem;
+
+          a {
+            align-items: baseline;
+          }
+
+          .img-holder {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-query-height {
+  .links-container {
+    .links-content {
+
+      .scroll-area {
+        height: 34rem;
+      }
+    }
+  }
+}
+
+@include media-query-sm {
+  .links-container {
+    .links-content {
+      .side-info {
+        h5 {
+          font-size: 1rem;
+        }
+      }
+
+      .scroll-area {
+        .resource-item {
+          a {
+            align-items: baseline;
+          }
+
+          .img-holder {
+            img {
+              width: 100%;
+            }
           }
         }
       }

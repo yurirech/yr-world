@@ -3,7 +3,11 @@ import MainHeader from "../../components/MainHeader/MainHeader";
 import './Links.scss'
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import ScrollArea from "../../components/ScrollArea/ScrollArea";
+import ResourceItem from "../../components/ResourceItem/ResourceItem";
+import { resourceItems, resourceInfo, resourceInfoMobile } from './LinksContent'
+
+
 
 class Links extends Component {
   render() {
@@ -15,53 +19,19 @@ class Links extends Component {
             <MainHeader title='Resources' />
           </Col>
         </Row>
-
         <Row className='links-content spc-evenly' noGutters={true} >
-          <Col xl={3}>
+          <Col  xl={12}>
             <div className='side-info'>
-              <h5>Here you will find links for courses, social networks,
-                tutorials and articles that help/helped me through my developer life
-              </h5>
-              <FontAwesomeIcon  icon='arrow-right' />
+              <h5 className='hidden-md-down'>{ resourceInfo }</h5>
+              <h5 className='hidden-md-up'>{ resourceInfoMobile }</h5>
             </div>
           </Col>
-          <Col className='content' xl={8}>
-            <div className='link'>
-              <h4>Udemy - WebDeveloper 2020 Course
-                <a href='/'><FontAwesomeIcon icon='external-link-alt'/></a>
-              </h4>
-              <hr/>
-              <p>Attack the dog then pretend like nothing happened i am the best leave hair everywhere sit on the laptop.
-                Run off table persian cat jump eat fish hiss at vacuum cleaner reaches under door into adjacent room or stinky cat.</p>
-              <div className='img-holder'>
-                <img src="https://www.globalcareercounsellor.com/blog/wp-content/uploads/2018/05/Online-Career-Counselling-course-750x422.jpg" alt="course"/>
-              </div>
-            </div>
-            <div className='link'>
-              <h4>Udemy - WebDeveloper 2020 Course
-                <a href='/'><FontAwesomeIcon icon='external-link-alt'/></a>
-              </h4>
-              <hr/>
-              <p>Attack the dog then pretend like nothing happened i am the best leave hair everywhere sit on the laptop.
-                Run off table persian cat jump eat fish hiss at vacuum cleaner reaches under door into adjacent room or stinky cat.</p>
-              <div className='img-holder'>
-                <img src="https://www.globalcareercounsellor.com/blog/wp-content/uploads/2018/05/Online-Career-Counselling-course-750x422.jpg" alt="course"/>
-              </div>
-            </div>
-            <div className='link'>
-              <h4>Udemy - WebDeveloper 2020 Course
-                <a href='/'> <FontAwesomeIcon icon='external-link-alt'/></a>
-              </h4>
-              <hr/>
-              <p>Attack the dog then pretend like nothing happened i am the best leave hair everywhere sit on the laptop.
-                Run off table persian cat jump eat fish hiss at vacuum cleaner reaches under door into adjacent room or stinky cat.</p>
-              <div className='img-holder'>
-                <img src="https://www.globalcareercounsellor.com/blog/wp-content/uploads/2018/05/Online-Career-Counselling-course-750x422.jpg" alt="course"/>
-              </div>
-            </div>
+          <Col md={10} xl={8}>
+            <ScrollArea>
+              <ResourceItem resourceItems={resourceItems}/>
+            </ScrollArea>
           </Col>
         </Row>
-
       </div>
     );
   }

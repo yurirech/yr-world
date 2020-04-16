@@ -2,6 +2,7 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 767px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+$breakpoint-height: 835px;
 
 $breakpoint-destinations: 1280px;
 
@@ -81,3 +82,11 @@ $breakpoint-destinations: 1280px;
     @content;
   }
 }
+
+@mixin media-query-height {
+  @media screen and (min-height: $breakpoint-height) {
+    @content;
+  }
+}
+
+

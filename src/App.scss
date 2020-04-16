@@ -35,7 +35,7 @@
 @include media-query-md {
   .App {
     .margin-page {
-      margin: 1.5rem 1.5rem  0 1.5rem;
+      margin: 1rem 1.5rem  0 1rem;
     }
   }
 }
@@ -44,6 +44,16 @@
   .App {
     .margin-page {
       margin: 1.5rem 1.5rem  0 1.5rem;
+    }
+  }
+}
+
+@include  media-query-height {
+  .App {
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
     }
   }
 }
