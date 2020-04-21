@@ -9,6 +9,9 @@ import MainHeader from "../../components/MainHeader/MainHeader";
 
 class About extends Component {
   render() {
+
+    const { onRouteChange } = this.props;
+
     return (
       <div className='about-container'>
         <Row className='wrapper spc-evenly' noGutters={true}>
@@ -31,7 +34,7 @@ class About extends Component {
             </Col>
 
           <Col className='cv' xl={12}>
-            <h5>Get in touch through my <a href="/">contact form</a> </h5>
+            <h5>Get in touch through my <button className='button-as-link' onClick={() => onRouteChange('contact')}>contact form</button> </h5>
             <h4>Click <a href="https://drive.google.com/uc?export=download&id=1HNfAE2WkJWzu0BjCQJYIDF-FRsfPIvfv" download>
               here
             </a> to download my C.V.</h4>

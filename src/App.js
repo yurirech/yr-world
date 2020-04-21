@@ -38,7 +38,7 @@ class App extends Component {
     if(route === 'home') {
       body = <Home />
     } else if(route === 'about') {
-      body = <About />
+      body = <About onRouteChange={onRouteChange} />
     } else  if(route ==='contact'){
       body = <Contact  />
     } else {
@@ -51,7 +51,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <NavBar onRouteChange={onRouteChange} />
+        <NavBar route={route} onRouteChange={onRouteChange} />
         {body}
         {footer}
       </div>

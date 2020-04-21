@@ -1,5 +1,5 @@
 .home-container {
-  background-image: url("../../assets/img/main-bg.jpg");
+  background-image: url("../../assets/img/bg-test.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   position: relative;
 
   .header {
-    background-color: #1e1d2cdb;
+    background-color: var(--yr-world-dark-shade);
     padding: 1rem;
 
 

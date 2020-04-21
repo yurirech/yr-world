@@ -1,3 +1,5 @@
+@import "../../media-queries";
+
 .contact-container {
   color:  var(--yr-world-light-shade);
 
@@ -33,6 +35,15 @@
       svg {
         margin-right: 1rem;
       }
+    }
+  }
+}
+
+@include media-query-sm {
+  .contact-container {
+    .contact-me {
+      padding: 0 .75rem;
+      font-size: 1.2rem;
     }
   }
 }

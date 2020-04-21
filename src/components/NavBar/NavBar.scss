@@ -1,7 +1,7 @@
 .navbar {
   padding: 2rem 0rem !important;
   width: 100%;
-  color: white;
+  color: var(--yr-world-light-shade);
   position: absolute !important;
   z-index: 1;
 
@@ -11,6 +11,10 @@
 
   button:focus {
     outline: unset;
+  }
+
+  .navbar-light .navbar-brand {
+    color: var(--yr-world-light-shade);
   }
 
   .navbar-light .navbar-toggler-icon {
@@ -40,11 +44,11 @@
 
   @media (max-width: 768px) {
     .navbar {
-      padding: unset !important;
-      top: .35rem;
+      padding: .75rem 0 0 0 !important;
+      top: 0;
       right: 0;
       padding-bottom: .75rem !important;
-      position: relative!important;
+      background-color: rgba(30, 29, 44, 0);
 
       .hide-brand-mobile {
         display: unset;
@@ -86,8 +90,13 @@
         }
 
         .navbar-toggler {
+          border: unset;
           display: block;
         }
+      }
+
+      .navbar-collapse-purple {
+        background-color: #1e1d2cf2;
       }
 
       .navbar-collapse {
