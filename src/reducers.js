@@ -1,7 +1,7 @@
 import { CHANGE_ROUTE, IS_SENT} from "./constants";
 
 const initialStateRoute = {
-  route: 'links'
+  route: 'home'
 };
 
 export const changeRoute = (state=initialStateRoute, action={}) => {

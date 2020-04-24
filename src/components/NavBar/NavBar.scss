@@ -1,6 +1,6 @@
 .navbar {
   padding: 2rem 0rem !important;
-  width: 100%;
+  width: 100vw;
   color: var(--yr-world-light-shade);
   position: absolute !important;
   z-index: 1;
@@ -15,6 +15,7 @@
 
   .navbar-light .navbar-brand {
     color: var(--yr-world-light-shade);
+    cursor: pointer;
   }
 
   .navbar-light .navbar-toggler-icon {

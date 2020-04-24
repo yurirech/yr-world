@@ -46,7 +46,7 @@ class App extends Component {
     }
 
     if(route !== 'home') {
-      footer = <div><div className='footer'><h5>YR World - coded by Yuri Rech 2020</h5></div></div>
+      footer = <div className='footer'><h5>YR World Copyright © 2020. All rights reserved</h5></div>
     }
 
     return (
