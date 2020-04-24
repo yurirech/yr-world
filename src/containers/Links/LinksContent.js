@@ -1,4 +1,4 @@
-
+import udemyLogo from '../../assets/img/udemy-logo.jpg'
 // const currentDate = new Date();
 // const dateStart = currentDate.getDate();
 // const dateEnd = (currentDate.getMonth() + 1) + '/' + currentDate.getFullYear();
@@ -19,7 +19,7 @@ export const resourceItems = [
     date: '15/04/2020',
     description: 'This was my very first course on Udemy (which is a source of amazing courses) e it was very good at basic knowledge especially' +
       'on HTML, CSS and Node.',
-    src: 'https://i.ytimg.com/vi/8s6UNBnXapM/maxresdefault.jpg',
+    src: udemyLogo,
     alt: 'course'
   },{
     title: 'The Web Developer Bootcamp',
@@ -28,7 +28,7 @@ export const resourceItems = [
     date: '15/04/2020',
     description: 'This was my very first course on Udemy (which is a source of amazing courses) e it was very good at basic knowledge especially' +
       'on HTML, CSS and Node.',
-    src: 'https://i.ytimg.com/vi/8s6UNBnXapM/maxresdefault.jpg',
+    src: udemyLogo,
     alt: 'course'
   },{
     title: 'The Web Developer Bootcamp',
@@ -37,7 +37,7 @@ export const resourceItems = [
     date: '15/04/2020',
     description: 'This was my very first course on Udemy (which is a source of amazing courses) e it was very good at basic knowledge especially' +
       'on HTML, CSS and Node.',
-    src: 'https://i.ytimg.com/vi/8s6UNBnXapM/maxresdefault.jpg',
+    src: udemyLogo,
     alt: 'course'
   }
 ];

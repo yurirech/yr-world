@@ -1,3 +1,5 @@
+@import "../../media-queries";
+
 .home-container {
   background-image: url("../../assets/img/bg-test.jpg");
   background-position: center;
@@ -52,6 +54,12 @@
      width: 100%;
    }
  }
+}
+
+@include media-query-md {
+  .home-container {
+    background-image: url("../../assets/img/bg-md.jpg");
+  }
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
