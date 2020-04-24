@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/yr-world/static/css/main.b4180d69.chunk.css",
-    "main.js": "/yr-world/static/js/main.d689a3b3.chunk.js",
-    "main.js.map": "/yr-world/static/js/main.d689a3b3.chunk.js.map",
+    "main.css": "/yr-world/static/css/main.435e4d1a.chunk.css",
+    "main.js": "/yr-world/static/js/main.7e17b98c.chunk.js",
+    "main.js.map": "/yr-world/static/js/main.7e17b98c.chunk.js.map",
     "runtime-main.js": "/yr-world/static/js/runtime-main.3560b86a.js",
     "runtime-main.js.map": "/yr-world/static/js/runtime-main.3560b86a.js.map",
     "static/css/2.de424728.chunk.css": "/yr-world/static/css/2.de424728.chunk.css",
-    "static/js/2.c63bb9e4.chunk.js": "/yr-world/static/js/2.c63bb9e4.chunk.js",
-    "static/js/2.c63bb9e4.chunk.js.map": "/yr-world/static/js/2.c63bb9e4.chunk.js.map",
+    "static/js/2.c473ef7d.chunk.js": "/yr-world/static/js/2.c473ef7d.chunk.js",
+    "static/js/2.c473ef7d.chunk.js.map": "/yr-world/static/js/2.c473ef7d.chunk.js.map",
     "index.html": "/yr-world/index.html",
-    "precache-manifest.a832404552eff701cdb3f361f74ba21d.js": "/yr-world/precache-manifest.a832404552eff701cdb3f361f74ba21d.js",
+    "precache-manifest.ea214f73784f0b3f8420e3014419fd5b.js": "/yr-world/precache-manifest.ea214f73784f0b3f8420e3014419fd5b.js",
     "service-worker.js": "/yr-world/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/yr-world/static/css/2.de424728.chunk.css.map",
-    "static/css/main.b4180d69.chunk.css.map": "/yr-world/static/css/main.b4180d69.chunk.css.map",
-    "static/js/2.c63bb9e4.chunk.js.LICENSE.txt": "/yr-world/static/js/2.c63bb9e4.chunk.js.LICENSE.txt",
+    "static/css/main.435e4d1a.chunk.css.map": "/yr-world/static/css/main.435e4d1a.chunk.css.map",
+    "static/js/2.c473ef7d.chunk.js.LICENSE.txt": "/yr-world/static/js/2.c473ef7d.chunk.js.LICENSE.txt",
     "static/media/Home.scss": "/yr-world/static/media/main-bg-mobile.2cef0be4.jpg",
-    "static/media/profile-pic.jpeg": "/yr-world/static/media/profile-pic.b806af82.jpeg"
+    "static/media/profile-pic.jpeg": "/yr-world/static/media/profile-pic.64503885.jpeg",
+    "static/media/udemy-logo.jpg": "/yr-world/static/media/udemy-logo.6021b064.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.3560b86a.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.c63bb9e4.chunk.js",
-    "static/css/main.b4180d69.chunk.css",
-    "static/js/main.d689a3b3.chunk.js"
+    "static/js/2.c473ef7d.chunk.js",
+    "static/css/main.435e4d1a.chunk.css",
+    "static/js/main.7e17b98c.chunk.js"
   ]
 }
