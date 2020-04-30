@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f1de491d940fc1315c9a8ef6bd242cc3",
+    "revision": "c006a9f00718578bd23cf32d87984dea",
     "url": "/yr-world/index.html"
   },
   {
-    "revision": "6b10167544845ea3205a",
-    "url": "/yr-world/static/css/2.de424728.chunk.css"
+    "revision": "e150dea4573ba3603c4e",
+    "url": "/yr-world/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "bfb776d8bc1315d7bef5",
-    "url": "/yr-world/static/css/main.435e4d1a.chunk.css"
+    "revision": "111574ee77c692e276c3",
+    "url": "/yr-world/static/css/main.e575a4c2.chunk.css"
   },
   {
-    "revision": "6b10167544845ea3205a",
-    "url": "/yr-world/static/js/2.c473ef7d.chunk.js"
+    "revision": "e150dea4573ba3603c4e",
+    "url": "/yr-world/static/js/2.4cf7cd37.chunk.js"
   },
   {
-    "revision": "5a733b4f72d20e4afb54e249ef308592",
-    "url": "/yr-world/static/js/2.c473ef7d.chunk.js.LICENSE.txt"
+    "revision": "cacaf3f01dd3bd8237006f7c58951c1c",
+    "url": "/yr-world/static/js/2.4cf7cd37.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bfb776d8bc1315d7bef5",
-    "url": "/yr-world/static/js/main.7e17b98c.chunk.js"
+    "revision": "111574ee77c692e276c3",
+    "url": "/yr-world/static/js/main.3e6b3c16.chunk.js"
   },
   {
-    "revision": "dba00c56471c6d24c1cc",
-    "url": "/yr-world/static/js/runtime-main.3560b86a.js"
+    "revision": "c2eaabd57fd698b5d0a0",
+    "url": "/yr-world/static/js/runtime-main.c2f29012.js"
   },
   {
     "revision": "48c5a6aea0affb89fab9818e9b511557",
